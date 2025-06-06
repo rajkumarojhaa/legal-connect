@@ -82,7 +82,7 @@ export default function Footer() {
               <div className="space-y-3">
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 6203568984</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-5 h-5 mr-3 text-blue-400" />
@@ -90,7 +90,7 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                  <span>123 Legal Street, Law City, LC 12345</span>
+                  <span> 123 Near redRose School, Banglore</span>
                 </div>
               </div>
             </motion.div>

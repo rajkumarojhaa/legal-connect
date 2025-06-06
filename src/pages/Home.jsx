@@ -33,23 +33,23 @@ import law4 from '../assets/images/law4.jpg';
 const lawyers = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Sarah Khan",
     specialty: "Family Law",
     experience: "12 years",
     rating: 4.9,
     reviews: 156,
-    location: "New York, NY",
+    location: "Banglore",
     image: law1,
     hourlyRate: "$350",
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "Michael Dsouza",
     specialty: "Business Law",
     experience: "8 years",
     rating: 4.8,
     reviews: 203,
-    location: "San Francisco, CA",
+    location: "Noida",
     image: law3,
     hourlyRate: "$400",
   },
@@ -60,7 +60,7 @@ const lawyers = [
     experience: "15 years",
     rating: 4.9,
     reviews: 189,
-    location: "Los Angeles, CA",
+    location: "Pune",
     image: law2,
     hourlyRate: "$450",
   },
@@ -71,7 +71,7 @@ const lawyers = [
     experience: "10 years",
     rating: 4.7,
     reviews: 142,
-    location: "Chicago, IL",
+    location: "Delhi",
     image: law4,
     hourlyRate: "$320",
   },
@@ -161,7 +161,7 @@ export default function Home() {
               Connect with experienced legal professionals who understand your
               needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-yellow-500 text-black font-semibold px-8 py-4">
                 Find a Lawyer
                 <ChevronRight className="ml-2 h-5 w-5" />
@@ -169,7 +169,7 @@ export default function Home() {
               <Button variant="outline" className="border-white text-white">
                 Learn More
               </Button>
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div
@@ -222,7 +222,7 @@ export default function Home() {
                   <label className="text-sm font-medium text-gray-700">
                     Lawyer Name
                   </label>
-                  <Input placeholder="Search by name..." className="h-12" />
+                  <Input placeholder="Search by name..." className="pl-10 h-12 shadow focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all duration-300 border-0 bg-white rounded-lg" />
                 </div>
 
                 <div className="space-y-2">
@@ -230,18 +230,18 @@ export default function Home() {
                     Lawyer Type
                   </label>
                   <Select>
-                    <SelectTrigger className="h-12">
+                    <SelectTrigger className="h-12 w-full  shadow focus:outline-none focus:ring-2 focus:ring-blue-600 bg-white rounded-lg  hover:bg-opacity-40 transition-all duration-300 border-0">
                       <SelectValue placeholder="Select type" />
                     </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="family">Family Law</SelectItem>
-                      <SelectItem value="business">Business Law</SelectItem>
-                      <SelectItem value="criminal">Criminal Law</SelectItem>
-                      <SelectItem value="real-estate">
+                    <SelectContent className="bg-gray-50 rounded-lg shadow-lg">
+                      <SelectItem value="family" className="hover:bg-indigo-300 ">Family Law</SelectItem>
+                      <SelectItem value="business" className="hover:bg-indigo-300 ">Business Law</SelectItem>
+                      <SelectItem value="criminal" className="hover:bg-indigo-300 ">Criminal Law</SelectItem>
+                      <SelectItem value="real-estate" className="hover:bg-indigo-300 ">
                         Real Estate Law
                       </SelectItem>
-                      <SelectItem value="employment">Employment Law</SelectItem>
-                      <SelectItem value="civil">Civil Law</SelectItem>
+                      <SelectItem value="employment" className="hover:bg-indigo-300 ">Employment Law</SelectItem>
+                      <SelectItem value="civil" className="hover:bg-indigo-300 ">Civil Law</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -251,14 +251,14 @@ export default function Home() {
                     Experience
                   </label>
                   <Select>
-                    <SelectTrigger className="h-12">
+                    <SelectTrigger className="h-12 w-full  shadow focus:outline-none focus:ring-2 focus:ring-blue-600 bg-white rounded-lg  hover:bg-opacity-40 transition-all duration-300 border-0">
                       <SelectValue placeholder="Select experience" />
                     </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="1-3">1-3 years</SelectItem>
-                      <SelectItem value="4-7">4-7 years</SelectItem>
-                      <SelectItem value="8-12">8-12 years</SelectItem>
-                      <SelectItem value="13+">13+ years</SelectItem>
+                    <SelectContent className="bg-gray-50 rounded-lg shadow-lg">
+                      <SelectItem value="1-3" className="hover:bg-indigo-300 ">1-3 years</SelectItem>
+                      <SelectItem value="4-7" className="hover:bg-indigo-300 ">4-7 years</SelectItem>
+                      <SelectItem value="8-12" className="hover:bg-indigo-300 ">8-12 years</SelectItem>
+                      <SelectItem value="13+" className="hover:bg-indigo-300">13+ years</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -268,15 +268,15 @@ export default function Home() {
                     Location
                   </label>
                   <Select>
-                    <SelectTrigger className="h-12">
+                    <SelectTrigger className="h-12 w-full  shadow focus:outline-none focus:ring-2 focus:ring-blue-600 bg-white rounded-lg  hover:bg-opacity-40 transition-all duration-300 border-0">
                       <SelectValue placeholder="Select location" />
                     </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="ny">New York, NY</SelectItem>
-                      <SelectItem value="ca">Los Angeles, CA</SelectItem>
-                      <SelectItem value="sf">San Francisco, CA</SelectItem>
-                      <SelectItem value="chicago">Chicago, IL</SelectItem>
-                      <SelectItem value="miami">Miami, FL</SelectItem>
+                    <SelectContent className="bg-gray-50 rounded-lg shadow-lg">
+                      <SelectItem value="dl" className="hover:bg-indigo-300">Delhi</SelectItem>
+                      <SelectItem value="bng" className="hover:bg-indigo-300">Banglore</SelectItem>
+                      <SelectItem value="pu" className="hover:bg-indigo-300">Pune</SelectItem>
+                      <SelectItem value="ptn" className="hover:bg-indigo-300">Patna</SelectItem>
+                      <SelectItem value="no" className="hover:bg-indigo-300">Noida</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -477,7 +477,7 @@ export default function Home() {
                   <Phone className="w-6 h-6 mr-4 text-yellow-400" />
                   <div>
                     <p className="font-semibold">Phone</p>
-                    <p className="text-blue-100">+1 (555) 123-4567</p>
+                    <p className="text-blue-100">+91 6203568984</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -492,7 +492,7 @@ export default function Home() {
                   <div>
                     <p className="font-semibold">Address</p>
                     <p className="text-blue-100">
-                      123 Legal Street, Law City, LC 12345
+                      123 Near redRose School, Banglore
                     </p>
                   </div>
                 </div>
