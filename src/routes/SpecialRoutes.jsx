@@ -8,7 +8,7 @@ import SignIn from '../pages/SignIn';
 import ConfirmationPage from '../pages/ConfirmationPage';
 import BookingPage from "../pages/BookingPage"
 import PaymentPage from "../pages/PaymentPage";
-
+import Services from "../pages/Services";
 
 
 const SpecialRoutes = () => {
@@ -22,6 +22,7 @@ const SpecialRoutes = () => {
        <Route path="/book/:lawyerId" element={<BookingPage />} />
        <Route path="/book/:lawyerId/payment" element={<PaymentPage />} />
       <Route path="/book/:lawyerId/confirmation" element={<ConfirmationPage />} />
+      <Route path="/services/:serviceType" element={<Services />} />
     </Routes>
   );
 };

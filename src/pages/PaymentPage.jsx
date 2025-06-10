@@ -37,7 +37,7 @@ export default function PaymentPage() {
   const dateParam = query.get("date");
   const timeParam = query.get("time");
 
-    // State to hold lawyer data
+  // State to hold lawyer data
   const [lawyer, setLawyer] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -343,7 +343,7 @@ export default function PaymentPage() {
                   >
                     <div className="space-y-4">
                       <div>
-                        <Label htmlFor="card-number" className="text-gray-700">
+                        <Label htmlFor="card-number" className="text-gray-700 mb-1">
                           Card Number
                         </Label>
                         <div className="relative mt-1">
@@ -355,7 +355,7 @@ export default function PaymentPage() {
                               setCardNumber(formatCardNumber(e.target.value))
                             }
                             maxLength={19}
-                            className={`pl-10 ${
+                            className={`pl-10 ring-1 ring-gray-200 focus:ring-2 focus:ring-blue-600 transition border-0  ${
                               formErrors.cardNumber ? "border-red-500" : ""
                             }`}
                           />
@@ -369,7 +369,7 @@ export default function PaymentPage() {
                       </div>
 
                       <div>
-                        <Label htmlFor="card-name" className="text-gray-700">
+                        <Label htmlFor="card-name" className="text-gray-700 mb-1">
                           Name on Card
                         </Label>
                         <Input
@@ -377,9 +377,11 @@ export default function PaymentPage() {
                           placeholder="John Doe"
                           value={cardName}
                           onChange={(e) => setCardName(e.target.value)}
-                          className={
-                            formErrors.cardName ? "border-red-500" : ""
-                          }
+                          className={`border-0 ring-1 ring-gray-200 focus:ring-2 focus:ring-blue-600 transition ${
+                            formErrors.cardName
+                              ? "ring-red-500 focus:ring-red-600"
+                              : ""
+                          }`}
                         />
                         {formErrors.cardName && (
                           <p className="text-red-500 text-sm mt-1">
@@ -392,7 +394,7 @@ export default function PaymentPage() {
                         <div>
                           <Label
                             htmlFor="expiry-date"
-                            className="text-gray-700"
+                            className="text-gray-700 mb-1"
                           >
                             Expiry Date
                           </Label>
@@ -404,9 +406,9 @@ export default function PaymentPage() {
                               setExpiryDate(formatExpiryDate(e.target.value))
                             }
                             maxLength={5}
-                            className={
-                              formErrors.expiryDate ? "border-red-500" : ""
-                            }
+                            className={`border-0 ring-1 ring-gray-200 focus:ring-2 focus:ring-blue-600 transition ${
+                            formErrors.expiryDate ? "border-red-500" : ""
+                          }`}
                           />
                           {formErrors.expiryDate && (
                             <p className="text-red-500 text-sm mt-1">
@@ -416,7 +418,7 @@ export default function PaymentPage() {
                         </div>
 
                         <div>
-                          <Label htmlFor="cvv" className="text-gray-700">
+                          <Label htmlFor="cvv" className="text-gray-700 mb-1">
                             CVV/CVC
                           </Label>
                           <Input
@@ -427,7 +429,9 @@ export default function PaymentPage() {
                               setCvv(e.target.value.replace(/\D/g, ""))
                             }
                             maxLength={4}
-                            className={formErrors.cvv ? "border-red-500" : ""}
+                            className={`border-0 ring-1 ring-gray-200 focus:ring-2 focus:ring-blue-600 transition ${
+                            formErrors.cvv ? "border-red-500" : ""
+                            }`}
                           />
                           {formErrors.cvv && (
                             <p className="text-red-500 text-sm mt-1">

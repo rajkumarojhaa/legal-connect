@@ -1,16 +1,21 @@
-import law1 from '../assets/images/law1.jpg';
-import law2 from '../assets/images/law2.jpg';
-import law3 from '../assets/images/law3.jpg';
-import law4 from '../assets/images/law4.jpg';
-import law5 from '../assets/images/law5.jpg';
-import law6 from '../assets/images/law6.jpg';
-
+import law1 from "../assets/images/law1.jpg";
+import law2 from "../assets/images/law2.jpg";
+import law3 from "../assets/images/law3.jpg";
+import law4 from "../assets/images/law4.jpg";
+import law5 from "../assets/images/law5.jpg";
+import law6 from "../assets/images/law6.jpg";
 
 export const allLawyers = [
   {
     id: "1",
     name: "Sarah Khan",
     specialty: "Family Law",
+    subSpecialties: [
+      "Divorce",
+      "Child Custody",
+      "Adoption",
+      "Domestic Violence",
+    ],
     experience: "12 years",
     rating: 4.9,
     reviews: 156,
@@ -19,11 +24,20 @@ export const allLawyers = [
     hourlyRate: "$350",
     hourlyRateValue: 350,
     description: "Specializing in divorce, child custody, and family disputes with over a decade of experience.",
+    education: "Harvard Law School",
+    languages: ["English", "Spanish"],
+    availability: "Available this week",
   },
   {
     id: "2",
     name: "Michael Chen",
     specialty: "Business Law",
+    subSpecialties: [
+      "Corporate Law",
+      "Contracts",
+      "Intellectual Property",
+      "Startups",
+    ],
     experience: "8 years",
     rating: 4.8,
     reviews: 203,
@@ -32,11 +46,20 @@ export const allLawyers = [
     hourlyRate: "$400",
     hourlyRateValue: 400,
     description: "Expert in corporate law, contracts, and business formation for startups and enterprises.",
+    education: "Stanford Law School",
+    languages: ["English", "Mandarin"],
+    availability: "Available next week",
   },
   {
     id: "3",
     name: "Emily Rodriguez",
     specialty: "Criminal Law",
+    subSpecialties: [
+      "Defence",
+      "Prosecution",
+      "White Collar Crime",
+      "Drug Offenses",
+    ],
     experience: "15 years",
     rating: 4.9,
     reviews: 189,
@@ -45,11 +68,20 @@ export const allLawyers = [
     hourlyRate: "$450",
     hourlyRateValue: 450,
     description: "Experienced criminal defense attorney with a strong track record in complex cases.",
+    education: "Yale Law School",
+    languages: ["English", "Spanish"],
+    availability: "Available this month",
   },
   {
     id: "4",
     name: "David Thompson",
     specialty: "Real Estate Law",
+    subSpecialties: [
+      "Property Transactions",
+      "Real Estate Disputes",
+      "Commercial Law",
+      "Landlord-Tenant Law",
+    ],
     experience: "10 years",
     rating: 4.7,
     reviews: 142,
@@ -57,12 +89,21 @@ export const allLawyers = [
     image: law4,
     hourlyRate: "$320",
     hourlyRateValue: 320,
-    description: "Specializing in property transactions, real estate disputes, and commercial law.",
+    description:"Specializing in property transactions, real estate disputes, and commercial law.",
+    education: "University of Chicago Law School",
+    languages: ["English", "French"],
+    availability: "Available next week",
   },
   {
     id: "5",
     name: "Lisa Wang",
     specialty: "Employment Law",
+    subSpecialties: [
+      "Workplace Disputes",
+      "Discrimination Cases",
+      "Labor Law",
+      "Employee Rights",
+    ],
     experience: "9 years",
     rating: 4.8,
     reviews: 167,
@@ -71,11 +112,20 @@ export const allLawyers = [
     hourlyRate: "$380",
     hourlyRateValue: 380,
     description: "Expert in workplace disputes, discrimination cases, and labor law.",
+    education: "Columbia Law School",
+    languages: ["English", "Chinese"],
+    availability: "Available today",
   },
   {
     id: "6",
     name: "Robert Martinez",
     specialty: "Civil Law",
+    subSpecialties: [
+      "Personal Injury",
+      "Civil Disputes",
+      "Litigation",
+      "Contract Law",
+    ],
     experience: "14 years",
     rating: 4.9,
     reviews: 234,
@@ -84,5 +134,8 @@ export const allLawyers = [
     hourlyRate: "$420",
     hourlyRateValue: 420,
     description: "Experienced in personal injury, civil disputes, and litigation.",
+    education: "University of Miami School of Law",
+    languages: ["English", "Spanish"],
+    availability: "Available next month",
   },
-]
+];

@@ -436,9 +436,11 @@ export default function Home() {
                     <Badge variant="secondary" className="mb-6">
                       {service.cases}
                     </Badge>
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white group-hover:bg-yellow-500 group-hover:text-black transition-colors duration-300">
-                      Book Lawyer
-                    </Button>
+                    <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, "-")}`}>
+  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white group-hover:bg-yellow-500 group-hover:text-black transition-colors duration-300">
+    Book Lawyer
+  </Button>
+</Link>
                   </CardContent>
                 </Card>
               </motion.div>
